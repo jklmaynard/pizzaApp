@@ -20,4 +20,19 @@ describe("Pizza", function() {
       expect(testPizza2.slices(testPizza2.sizePizza)).to.equal("Whoops!");
     });
   });
+
+  describe("price", function() {
+    it("will return a price factoring size and type of pizza", function() {
+      var testPizza = Object.create(Pizza);
+      testPizza.sizePizza = 12;
+      testPizza.typeOfPizza = "Cheese"
+      expect(testPizza.price(testPizza.sizePizza, testPizza.typeOfPizza)).to.equal(20)
+
+      var testPizza = Object.create(Pizza);
+      testPizza.sizePizza = 12;
+      testPizza.typeOfPizza = "Pepperoni"
+      expect(testPizza.price(testPizza.sizePizza, testPizza.typeOfPizza)).to.equal(24)
+
+    });
+  });
 });
