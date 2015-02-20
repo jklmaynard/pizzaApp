@@ -2,7 +2,7 @@ var Pizza = {
   sizePizza: 0,
   slices: function(sizePizza) {
     if (sizePizza <= 11 || sizePizza >= 25) {
-      return "Whoops! You have an order too large or too small."
+      return "Whoops!"
     } else
         var oneSlice = 14.1375
         var area = 3.14 * ((sizePizza/2)*(sizePizza/2))
@@ -21,16 +21,20 @@ $(document).ready(function(event) {
     var inputtedPizzaType = $("select#pizzaType").val();
     var slices = newPizza.slices(inputtedPizzaSize)
 
-    newPizza.orderName = inputtedName;
-    newPizza.sizePizza = inputtedPizzaSize;
-    newPizza.typeOfPizza = inputtedPizzaType;
+    if (slices === "Whoops!") {
+      alert("You have ordered a pizza either too big or too small. Please try again!");
+    } else {
 
-  $("div#newOrder").append("<p>" +
-      "Name: " + newPizza.orderName + "<br>" +
-      "Type: " + newPizza.typeOfPizza + "<br>" +
-      "Size: " + newPizza.sizePizza + " inches" + "<br>" +
-      "How many slices? " + slices + "</p>")
+        newPizza.orderName = inputtedName;
+        newPizza.sizePizza = inputtedPizzaSize;
+        newPizza.typeOfPizza = inputtedPizzaType;
 
+      $("div#newOrder").append("<p>" +
+          "Name: " + newPizza.orderName + "<br>" +
+          "Type: " + newPizza.typeOfPizza + "<br>" +
+          "Size: " + newPizza.sizePizza + " inches" + "<br>" +
+          "How many slices? " + slices + "</p>")
+    }
 
   });
 });
