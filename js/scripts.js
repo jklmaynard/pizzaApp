@@ -39,7 +39,6 @@ $(document).ready(function(event) {
         newPizza.sizePizza = inputtedPizzaSize;
         newPizza.typeOfPizza = inputtedPizzaType;
 
-<<<<<<< HEAD
       $("div#newOrder").append(
           "<h3> Your Order, " + newPizza.orderName + "</h3>" + "<p>" +
           "Type: " + newPizza.typeOfPizza + "<br>" +
