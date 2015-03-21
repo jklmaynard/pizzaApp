@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 PIZZA APP
 
 This is a simple application that calculates the amount of pizza slices a user can have given the size of the pizza pie, and then charges an exorbiant amount of money for that pie.  
