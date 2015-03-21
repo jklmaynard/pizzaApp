@@ -39,12 +39,15 @@ $(document).ready(function(event) {
         newPizza.sizePizza = inputtedPizzaSize;
         newPizza.typeOfPizza = inputtedPizzaType;
 
-      $("div#newOrder").append("<p>" +
-          "Name: " + newPizza.orderName + "<br>" +
+      $("div#newOrder").append(
+          "<h3> Your Order, " + newPizza.orderName + "</h3>" + "<p>" +
           "Type: " + newPizza.typeOfPizza + "<br>" +
           "Size: " + newPizza.sizePizza + " inches" + "<br>" +
           "How many slices? " + slices + "<br>" + "<br>" +
-          "This will cost you " + cost + " dollars" + "</p>")
+          "This will cost you " + cost + " dollars" + "</p>" );
+      $("p#comment").show();
+      $("#pictures").show();
+      $("div#orders").hide();
     }
 
   });

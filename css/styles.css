@@ -1,0 +1,20 @@
+#comment {
+  color: red;
+  display: none;
+  margin: 10px 0;
+}
+
+.container {
+  background-image: url("../images/background.jpg");
+  margin-top: 20px;
+  padding: 15px 200px 450px;
+}
+
+#pictures {
+  display: none;
+}
+
+#pizza-face {
+  max-width: 350px;
+  max-height: 300px;
+}
